@@ -15,9 +15,9 @@
                         {officePhone}
                     </div>
                 </div>
-                <div style={{ placeSelf: "center"}}>
+                 <div style={{ placeSelf: "center"}}>
                     {">"}
-                </div>
+                </div> 
             </div>
             <div className="Box"
             style={{ display: "flex", justifyContent: "space-between" }}>

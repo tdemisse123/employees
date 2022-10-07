@@ -6,10 +6,10 @@ import Header from "../../components/Header/Header";
 function Employee() {
     const{state} = useLocation();
     return(
-        <div className="Box2">
+        <div style={{width:"50%"}}>
 
             <Header title="Employee" />
-            <div>
+            <div style={{border: "1px solid gainsboro"}}>
                 <EmployeeListItem emp={state}/>
                 <EmployeeDisplay emp={state}/>
 

@@ -1,4 +1,4 @@
-import React,{useState} from "react";
+import React,{useState, useEffect} from "react";
 import { useNavigate } from "react-router-dom";
 import Header from "../../components/Header/Header";
 import EmployeeListItem from "../../components/EmployeeListItem/EmployeeListItem";
@@ -61,12 +61,23 @@ function Home() {
     
     const [empName, setEmpName] = useState();
     const navigate = useNavigate()
+
+    useEffect(() => {
+      setEmployees(employees)
+    }, [])
+
+    useEffect(() => {
+     if(empName)
+      setEmployees(employees.filter((x)=>x.name.toLowerCase().indexOf(empName.toLowerCase()) !== -1))
+     else
+      setEmployees(employees)   
+    }, [empName])
    
     return (
-      <div className="Box1">
+      <div style={{width:"50%", border: "1px solid gainsboro"}}>
         
         <Header title="Employee Directory" />
-        <input type="text" onChange={(event)=>setEmpName(event.target.value)} style={{width: "48%", height:"30px"}} />
+        <input type="text" onChange={(event)=>setEmpName(event.target.value)} style={{width: "50%", height:"30px"}} />
         <div>
           {employees?.map((x)=> <div onClick={()=> navigate('Employee', {state: x})}> <EmployeeListItem emp={x} /></div>)}
         </div>

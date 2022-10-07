@@ -13,7 +13,9 @@ export default function Header(props) {
                 <div onClick={()=>{
                 navigate('/')
             }}>
-          <FontAwesomeIcon icon={faArrowAltCircleLeft} /> 
+          <FontAwesomeIcon icon={faArrowAltCircleLeft} size="2x" cursor="pointer"/> 
+        
+         
             </div> 
             }  
 
