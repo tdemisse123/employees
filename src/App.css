@@ -1,5 +1,31 @@
 .App {
   text-align: center;
+  
+}
+
+/* 
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+} */
+
+
+/* .Box {
+  border: #282c34 1px solid gainsboro;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+} */
+
+.Box1{
+  width: 50%;
+}
+
+.Box2{
+  width: 50%;
 }
 
 .App-logo {
